@@ -3,13 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
-
+using UnityEngine.SceneManagement;
 public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public Transform buttonScale;
     Vector3 defaultScale;
     public BTNType currentType;
-
     private void Start()
     {
         defaultScale = buttonScale.localScale;
@@ -19,12 +18,20 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
         switch (currentType)
         {
             case BTNType.newStart:
-                Debug.Log("New Start");
+                SceneManager.LoadScene("Loading");
                 break;
             case BTNType.load:
-                Debug.Log("Load Character");
+                SceneManager.LoadScene("Loading");
                 break;
-
+            case BTNType.sound:
+                Debug.Log("sound configuration");
+                break;
+            case BTNType.quit:
+                Debug.Log("quit the menu");
+                break;
+            case BTNType.back:
+                Debug.Log("back to the menu");
+                break;
         }
     }
 
