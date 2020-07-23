@@ -16,7 +16,7 @@ public class SceneLoad : MonoBehaviour
     IEnumerator LoadScene() // 비동기로드(LoadSceneAsync)를 만들기 위해 코루틴 사용, LoadScene은 동기 로드
     {// 비동기 로드는 Scene을 불러올 때 멈추지 않고 다른 작업을 할 수 있다.
         yield return null;
-        AsyncOperation operation = SceneManager.LoadSceneAsync("Loading"); // LoadSceneAsync가 AsyncOperation 반환
+        AsyncOperation operation = SceneManager.LoadSceneAsync("Play"); // LoadSceneAsync가 AsyncOperation 반환
         operation.allowSceneActivation = false;
 
         while (!operation.isDone) // 로딩이 끝나서 isDone이 true가 될 때까지 반복
