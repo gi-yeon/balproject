@@ -11,6 +11,8 @@ public class Moving : MonoBehaviour
     public Rigidbody2D playerRigidbody;
     private float tmpSpeed;
 
+    public Vector2 arrow;
+
     float inputX;
     float inputY;
 
@@ -22,6 +24,7 @@ public class Moving : MonoBehaviour
 
     private float lastInputX = 0;
     private float lastInputY = 0;
+
 
     bool bothArrow = false;
 
@@ -74,6 +77,7 @@ public class Moving : MonoBehaviour
             }
 
         }
+
         if (tmpInputY != 0)
         {
             incY = Mathf.Abs(tmpInputY) - Mathf.Abs(lastInputY);
@@ -90,7 +94,11 @@ public class Moving : MonoBehaviour
 
         }
 
-
+        if (tmpInputX == 0 && tmpInputY == 0)
+        {
+            inputX = 0;
+            inputY = 0;
+        }
 
         Vector2 movement = new Vector2(inputX, inputY);
 
@@ -106,5 +114,9 @@ public class Moving : MonoBehaviour
         animator.SetBool("isPlayerMoving", isPlayerMoving);
         animator.SetFloat("PrevMoveX", prevPosition.x);
         animator.SetFloat("PrevMoveY", prevPosition.y);
+
+
+        arrow = new Vector2(inputX, inputY);
+
     }
 }
