@@ -24,7 +24,7 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 SceneManager.LoadScene("Loading");
                 break;
             case BTNType.sound:
-                Debug.Log("sound configuration");
+                SceneManager.LoadScene("Setting");
                 break;
             case BTNType.quit:
                 Debug.Log("quit the menu");

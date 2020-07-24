@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/\uAE30\uC5F0/Play.unity"
     guid: df4570d54122364468c93abbd0295cf9
+  - enabled: 1
+    path: "Assets/\uAC74\uC6B0/Setting.unity"
+    guid: f6981177d6c0d444f80f8612ab2bc2eb
   m_configObjects: {}
