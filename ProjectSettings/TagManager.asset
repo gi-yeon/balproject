@@ -3,7 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags: []
+=======
+  tags:
+  - Enemy
+>>>>>>> 3933b0cc26833e5ba71e9028d22a913ef18bbe54
   layers:
   - Default
   - TransparentFX
@@ -41,3 +46,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+<<<<<<< HEAD
+=======
+  - name: BackGround
+    uniqueID: 2715275153
+    locked: 0
+  - name: Object
+    uniqueID: 2323513873
+    locked: 0
+  - name: UI
+    uniqueID: 752345109
+    locked: 0
+>>>>>>> 3933b0cc26833e5ba71e9028d22a913ef18bbe54
