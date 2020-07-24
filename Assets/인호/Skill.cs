@@ -25,7 +25,6 @@ public class Skill : MonoBehaviour
     IEnumerator SizeUp()
     {
         canUseSizeUp = false;
-        Debug.Log("canusesizeup");
         float distanceBallPlayer = 4f;
         Vector3 tempSize = theBall.transform.localScale;
         float alpha = (theBall.transform.localPosition.x - distanceBallPlayer) / tempSize.x;
