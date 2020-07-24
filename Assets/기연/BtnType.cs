@@ -27,7 +27,11 @@ public class BtnType : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
                 SceneManager.LoadScene("Setting");
                 break;
             case BTNType.quit:
-                Debug.Log("quit the menu");
+#if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+#else
+                Application.Quit() // 어플리케이션 종료
+#endif
                 break;
             case BTNType.back:
                 Debug.Log("back to the menu");
