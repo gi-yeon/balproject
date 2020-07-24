@@ -26,6 +26,8 @@ public class SettingManager : MonoBehaviour
         btnsource.Play();
         PlayerPrefs.SetFloat("SliderA", sliderA.value);
         PlayerPrefs.SetFloat("SliderB", sliderB.value);
+        Destroy(btnsource.gameObject, 2f);
+        DontDestroyOnLoad(btnsource.gameObject);
         SceneManager.LoadScene("Main");
     }
     void Awake()
